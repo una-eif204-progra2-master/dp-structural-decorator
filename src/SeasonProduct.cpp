@@ -4,7 +4,7 @@
 
 #include "SeasonProduct.h"
 
-SeasonProduct::SeasonProduct(const Product &product) : product(product) {}
+SeasonProduct::SeasonProduct(const Product &product) : product{product} {}
 
 SeasonProduct::~SeasonProduct() {
 

@@ -9,11 +9,12 @@
 #include <ostream>
 #include "Product.h"
 
-class SeasonProduct : Product {
+class SeasonProduct : public Product {
 private:
     const Product& product;
     string seasonName;
 public:
+
     SeasonProduct(const Product &product);
 
     virtual ~SeasonProduct();
