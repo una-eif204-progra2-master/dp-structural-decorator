@@ -8,6 +8,7 @@
 #include <iostream>
 #include "PhysicalProduct.h"
 #include "DigitalProduct.h"
+#include "SeasonProduct.h"
 
 using namespace std;
 
@@ -30,9 +31,13 @@ int main() {
         digitalProduct.setPrice(randomNumberV2);
         digitalProduct.setFilePath("My Docu");
 
-        cout << "Physical Product: " << physicalProduct << endl;
-        cout << "Digital Product: " << digitalProduct << endl;
+        cout << "Physical Product           > " << physicalProduct << endl;
+        cout << "Digital Product            > " << digitalProduct << endl;
 
+        SeasonProduct christmasDigitalProduct{digitalProduct};
+        christmasDigitalProduct.setSeasonName("Christmas Season");
+
+        cout << "Christmas Digital Product  > " << christmasDigitalProduct << endl;
 
     } catch (exception& ex) {
         cerr << ex.what() << '\n' << std::endl;
